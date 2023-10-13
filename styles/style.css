@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #ffffff;
+  --bg-color: rgb(10, 10, 10);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+.profile {
+  text-align: center;
+  padding: 24px;
+  /* background-color: rgb(20, 20, 37);
+  border-radius: 25px 25px 0 0; */
+}
+
+.profile img {
+  width: 112px;
+  border-radius: 100%;
+  border: 2px solid gray;
+}
+
+.profile figcaption {
+  margin-top: 8px;
+}
