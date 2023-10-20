@@ -1,12 +1,24 @@
-* {
+html,
+body,
+h1,
+h2,
+span,
+a,
+p,
+figure,
+figcaption,
+img,
+nav,
+ul,
+li,
+button,
+div {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  /* colocar iamgem como bg */
-  /* --bg-url: url(../assets/bg-dark.jpg); */
   --text-color: #000000;
   --bg-color: rgb(10, 10, 10);
   --switch-bg-url: url(../assets/moon-stars.svg);
@@ -19,8 +31,6 @@
 }
 
 .light {
-  /* colocar imagem como bg */
-  /* --bg-url: url(../assets/bg-light.jpg); */
   --text-color: #ffffff;
   --bg-color: rgb(255, 255, 255);
   --switch-bg-url: url(../assets/sun.svg);
@@ -46,7 +56,7 @@ body * {
 .container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto 0px;
+  margin: 0 auto;
   padding: 0 24px;
 }
 
@@ -60,11 +70,12 @@ body * {
 .profile img {
   width: 112px;
   border-radius: 100%;
-  border: 2px solid gray;
+  border: 2px solid var(--nav-item-border-color);
 }
 
 .profile figcaption {
   margin-top: 8px;
+  color: var(--nav-item-bg-color-hover-text);
 }
 
 .switch-mode {
@@ -149,7 +160,7 @@ nav ul li a {
   padding: 16px 24px;
   text-decoration: none;
 
-  background-color: var(--nav-item-bg-color);
+  background-color: var(--nav-item-bg-color-hover-text);
   border: 1.5px solid var(--nav-item-border-color);
   border-radius: 8px;
 
@@ -167,4 +178,82 @@ nav ul li a:hover {
 footer {
   text-align: center;
   color: var(--footer-text-color);
+
+  display: none;
+}
+
+/* MODAL SOBRE MIM */
+
+dialog {
+  padding: 0px;
+
+  width: 90%; /* a partir dessas propriedades a tag dialog terá largura e altura fixa. */
+  max-width: 600px;
+
+  border: 4px solid var(--nav-item-border-color);
+  border-radius: 10px;
+  background-color: var(--text-color);
+}
+
+dialog::backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+.modal__container {
+  position: relative;
+  padding: 20px;
+}
+
+.modal__container h2,
+.modal__container p,
+.modal__container span {
+  color: var(--nav-item-bg-color-hover-text);
+}
+
+.modal__container p span:first-child {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bold;
+  border-bottom: 1px solid var(--nav-item-bg-color-hover-text);
+}
+
+.modal__container p {
+  display: block;
+  margin: 20px 0;
+}
+
+.modal__container span {
+  display: block;
+}
+
+.modal__container ion-icon {
+  color: var(--nav-item-bg-color-hover-text);
+}
+
+.modal__container button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  padding: 10px;
+
+  display: flex;
+
+  border: 0;
+  border-radius: 10px;
+
+  background-color: var(--nav-item-bg-color);
+  border: 1px solid var(--nav-item-border-color);
+  color: var(--text-color);
+  font-weight: bold;
+
+  transition: background 0.4s;
+}
+
+.modal__container button:hover {
+  cursor: pointer;
+  background-color: var(--text-color);
+  border: 1px solid var(--nav-item-border-color);
+  color: var(--nav-item-bg-color-hover-text);
 }
