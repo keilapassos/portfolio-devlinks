@@ -22,19 +22,80 @@
         <figcaption>Keila Passos</figcaption>
       </figure>
 
-      <div class="switch-button">
-        <button>SwitchButton</button>
-        <span>...</span>
+      <div class="switch-mode" onclick="toggleMode()">
+        <button></button>
+        <span></span>
       </div>
 
       <nav>
         <ul>
-          <li><a href="#">Sobre mim</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Currículo</a></li>
-          <li><a href="#">Contato</a></li>
+          <li id="skills" onclick="handleModal()">
+            <a href="#">Habilidades</a>
+          </li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#resume">Currículo</a></li>
+          <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
+
+      <dialog id="modal-controller">
+        <div class="modal__container">
+          <h2>Habilidades</h2>
+          <button id="close-modal">Fechar</button>
+
+          <p>
+            <span>
+              Frontend
+              <ion-icon name="logo-nodejs"></ion-icon>
+              <ion-icon name="logo-react"></ion-icon>
+            </span>
+
+            <span>
+              <ion-icon name="chevron-forward-outline"></ion-icon> Html5, Css3,
+              Javascript, React Js
+            </span>
+          </p>
+
+          <p>
+            <span>
+              Backend
+              <ion-icon name="logo-python"></ion-icon>
+              <ion-icon name="server-outline"></ion-icon>
+            </span>
+
+            <span>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+              Python, Django, Flask, Node Js, Bancos de dados MySQL e PostgreSQL
+            </span>
+          </p>
+
+          <p>
+            <span>
+              Idiomas
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+              <ion-icon name="book-outline"></ion-icon>
+            </span>
+
+            <span>
+              <ion-icon name="chevron-forward-outline"></ion-icon>Inglês
+              intermediário
+            </span>
+          </p>
+
+          <p>
+            <span>
+              Outros
+              <ion-icon name="logo-github"></ion-icon>
+              <ion-icon name="logo-tux"></ion-icon>
+            </span>
+
+            <span>
+              <ion-icon name="chevron-forward-outline"></ion-icon>Git, Linux,
+              Docker-compose, Metodologia Ágil Scrum
+            </span>
+          </p>
+        </div>
+      </dialog>
 
       <section class="social-links">
         <a href="https://github.com/keilapassos" target="_blank"></a>
@@ -46,5 +107,15 @@
 
       <footer>Desenvolvido por Keila Passos - 2023</footer>
     </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
